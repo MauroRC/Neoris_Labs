@@ -17,33 +17,41 @@ namespace TP02_POO
 
         protected void Calcular_Click(object sender, EventArgs e)
         {
-            if( this.rbtnEncargado.Checked == true || this.rbtnSupervisor.Checked == true) {
-            Empleado empleado;
-            if (rbtnEncargado.Checked == true) 
+            try
             {
-                empleado = new Encargado();
+
+                if (this.rbtnEncargado.Checked == true || this.rbtnSupervisor.Checked == true)
+                {
+                    Empleado empleado;
+                    if (rbtnEncargado.Checked == true)
+                    {
+                        empleado = new Encargado();
+                    }
+                    else
+                    {
+                        empleado = new Supervisor();
+                        empleado.Categoria = ddlCategoria.SelectedValue.ToString();
+
+                    }
+                    empleado.Nombre = this.tbxNombre.Text;
+                    empleado.Apellido = this.tbxApellido.Text;
+                    empleado.AñoIngreso = int.Parse(this.tbxAñoIngreso.Text);
+                    empleado.SueldoBase = int.Parse(this.tbxSueldoBase.Text);
+                    empleado.HorasTrabajadas = int.Parse(this.tbxHsTrabajadas.Text);
+                    empleado.PagoPorHora = int.Parse(this.tbxPrecioHora.Text);
+                    tbxSueldo.Text = string.Format("El sueldo de {0} {1} es de $ {2}", this.tbxNombre.Text, this.tbxApellido.Text, empleado.CalculaSueldo());
+                }
+                else
+                {
+                    this.lblTipoEmpleado.Text = "No ha especificado el tipo de empleado";
+                }
             }
-            else
+            catch(FormatException)
             {
-                empleado = new Supervisor();
-                empleado.Categoria = ddlCategoria.SelectedValue.ToString();
- 
+                this.lblError.Text="Alguno de los campos tiene un tipo erroneo";
             }
-            empleado.Nombre = this.tbxNombre.Text;
-            empleado.Apellido = this.tbxApellido.Text;
-            empleado.AñoIngreso = int.Parse(this.tbxAñoIngreso.Text);
-            empleado.SueldoBase = int.Parse(this.tbxSueldoBase.Text);
-            empleado.HorasTrabajadas = int.Parse(this.tbxHsTrabajadas.Text);
-            empleado.PagoPorHora = int.Parse(this.tbxPrecioHora.Text);
-            tbxSueldo.Text = string.Format("El sueldo de {0} {1} es de $ {2}", this.tbxNombre.Text, this.tbxApellido.Text, empleado.CalculaSueldo());
-            }
-            else
-            {
-                this.lblTipoEmpleado.Text="No ha especificado el tipo de empleado";
-            }
-        }
-    }
-        
+        }        
+    
 
         protected void rbtnEncargado_Check(object sender, EventArgs e)
         {
@@ -56,5 +64,6 @@ namespace TP02_POO
         {
             this.ddlCategoria.Enabled = true;
             this.rbtnEncargado.Checked = false;
-        }
+        }    
+    }
 }

@@ -95,6 +95,8 @@
             </tr>
         </table>
         <asp:TextBox ID="tbxSueldo" runat="server" Width="220px" />
+        <br />
+        <asp:Label ID="lblError" Text="" runat="server" />
     </div>
     </form>
 </body>
