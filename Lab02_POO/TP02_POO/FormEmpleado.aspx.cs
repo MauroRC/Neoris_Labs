@@ -31,6 +31,10 @@ namespace TP02_POO
                     {
                         empleado = new Supervisor();
                         empleado.Categoria = ddlCategoria.SelectedValue.ToString();
+                        if(this.ddlCategoria.Text == "")
+                        {
+                            this.lblCategoria.Text = "No ha especificado la categoria";
+                        }
 
                     }
                     empleado.Nombre = this.tbxNombre.Text;

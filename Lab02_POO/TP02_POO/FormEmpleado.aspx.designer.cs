@@ -121,6 +121,15 @@ namespace TP02_POO {
         protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
         
         /// <summary>
+        /// lblCategoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCategoria;
+        
+        /// <summary>
         /// tbxSueldo control.
         /// </summary>
         /// <remarks>

@@ -85,6 +85,9 @@
                         <asp:ListItem Text="C" />
                     </asp:DropDownList>
                 </td>
+                <td>
+                    <asp:Label ID="lblCategoria" Text="" runat="server" />
+                </td>
             </tr>
                 <tr>
                 <td>
