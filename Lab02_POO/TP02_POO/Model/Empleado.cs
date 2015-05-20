@@ -17,6 +17,7 @@ namespace TP02_POO.Model
         int _sueldoBase;
         string _dni;
         int _pagoPorHora;
+        string _categoria;
         int _horasTrabajadeas;
 
         public string Nombre
@@ -58,6 +59,13 @@ namespace TP02_POO.Model
         {
             get { return _pagoPorHora; }
             set { _pagoPorHora = value; }
+        }
+
+
+        public string Categoria
+        {
+            get { return _categoria; }
+            set { _categoria = value; }
         }
 
 
