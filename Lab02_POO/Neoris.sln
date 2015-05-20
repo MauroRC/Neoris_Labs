@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab02_POO", "WebApplication\Lab02_POO.csproj", "{63F86B5F-2DD9-4C6C-BB9B-500F989B5261}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP02_POO", "TP02_POO\TP02_POO.csproj", "{DABD057F-8A2E-43F1-A22F-C4F603964B34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63F86B5F-2DD9-4C6C-BB9B-500F989B5261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F86B5F-2DD9-4C6C-BB9B-500F989B5261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F86B5F-2DD9-4C6C-BB9B-500F989B5261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F86B5F-2DD9-4C6C-BB9B-500F989B5261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABD057F-8A2E-43F1-A22F-C4F603964B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABD057F-8A2E-43F1-A22F-C4F603964B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABD057F-8A2E-43F1-A22F-C4F603964B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABD057F-8A2E-43F1-A22F-C4F603964B34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
