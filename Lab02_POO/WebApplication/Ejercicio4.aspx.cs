@@ -24,7 +24,7 @@ namespace Lab02_POO
 
             while (cont < TIROS)
             {
-                switch (rnd.Next(1, 6))
+                switch (rnd.Next(1, 7))
                 {
                     case 1:
                         {

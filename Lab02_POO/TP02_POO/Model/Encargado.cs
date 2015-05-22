@@ -10,7 +10,7 @@ namespace TP02_POO.Model
         
         public override decimal CalculaSueldo()
         {
-            return SueldoBase + HorasTrabajadas * PagoPorHora + this.PagoPorAntiguedad();
+            return SueldoBase + HorasTrabajadas * PagoPorHora + this.PagoPorAntiguedad()*2;
         }
     }
 }

@@ -8,16 +8,14 @@ namespace TP02_POO.Model
 {
     public class Empleado: IEmpleado
     {
-        enum porcentajePorAntiguedad { menosDe5Años = 0, entre5Y10Años = 5, masDe10Años = 10 };
+        enum porcentajePorAntiguedad {entre5Y10Años = 5, masDe10Años = 10 };
 
-        // variables + propiedades
         string _nombre;
         string _apellido;
         int _añoIngreso;
         int _sueldoBase;
         string _dni;
-        int _pagoPorHora;
-        string _categoria;
+        int _pagoPorHora; 
         int _horasTrabajadeas;
 
         public string Nombre
@@ -62,13 +60,6 @@ namespace TP02_POO.Model
         }
 
 
-        public string Categoria
-        {
-            get { return _categoria; }
-            set { _categoria = value; }
-        }
-
-
         public int HorasTrabajadas
         {
             get { return _horasTrabajadeas; }
@@ -89,7 +80,7 @@ namespace TP02_POO.Model
             }
             else if ((DateTime.Today.Year - AñoIngreso) < 5)
             {
-                return PagoPorHora*HorasTrabajadas* (int)porcentajePorAntiguedad.menosDe5Años/100;
+                return 0;
             }
             else
             {

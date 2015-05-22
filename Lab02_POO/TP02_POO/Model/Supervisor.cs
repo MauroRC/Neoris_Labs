@@ -9,6 +9,17 @@ namespace TP02_POO.Model
     {
         enum porcentajePorCategoria { A = 10, B = 5, C = 2 };
         int porcentajeComision = 5;
+        string _categoria;
+
+        public Supervisor(string categoria)
+        {
+            Categoria = categoria;
+        }
+        public string Categoria
+        {
+            get { return _categoria; }
+            set { _categoria = value; }
+        }
 
         public override decimal CalculaSueldo()
         {
@@ -17,15 +28,15 @@ namespace TP02_POO.Model
 
         public decimal PagoPorCategoria()
         {
-            if (Categoria == "A")
+            if (this.Categoria == "A")
             {
                 return PagoPorHora*HorasTrabajadas * (int)porcentajePorCategoria.A / 100;
             }
-            else if (Categoria == "B")
+            else if (this.Categoria == "B")
             {
                 return PagoPorHora*HorasTrabajadas * (int)porcentajePorCategoria.B / 100;
             }
-            else if (Categoria == "C")
+            else if (this.Categoria == "C")
             {
                 return PagoPorHora * HorasTrabajadas * (int)porcentajePorCategoria.C / 100;
             }

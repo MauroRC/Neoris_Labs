@@ -19,7 +19,7 @@ namespace TP02_POO
         {
             try
             {
-
+                
                 if (this.rbtnEncargado.Checked == true || this.rbtnSupervisor.Checked == true)
                 {
                     Empleado empleado;
@@ -29,8 +29,7 @@ namespace TP02_POO
                     }
                     else
                     {
-                        empleado = new Supervisor();
-                        empleado.Categoria = ddlCategoria.SelectedValue.ToString();
+                        empleado = new Supervisor(ddlCategoria.SelectedValue.ToString());
                         if(this.ddlCategoria.Text == "")
                         {
                             this.lblCategoria.Text = "No ha especificado la categoria";
