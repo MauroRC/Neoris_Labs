@@ -76,7 +76,7 @@ namespace TP02_POO.Model
         {
             if ((DateTime.Today.Year - AñoIngreso) > 10)
             {
-                return PagoPorHora* HorasTrabajadas * (int)porcentajePorAntiguedad.masDe10Años / 100;
+                return PagoPorHora* HorasTrabajadas * (decimal)porcentajePorAntiguedad.masDe10Años /100;
             }
             else if ((DateTime.Today.Year - AñoIngreso) < 5)
             {
@@ -84,7 +84,7 @@ namespace TP02_POO.Model
             }
             else
             {
-                return PagoPorHora*HorasTrabajadas * (int)porcentajePorAntiguedad.entre5Y10Años / 100;
+                return PagoPorHora*HorasTrabajadas * (decimal)porcentajePorAntiguedad.entre5Y10Años / 100;
             }
 
         }

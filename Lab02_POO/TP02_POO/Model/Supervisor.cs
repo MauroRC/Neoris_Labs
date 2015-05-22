@@ -30,15 +30,15 @@ namespace TP02_POO.Model
         {
             if (this.Categoria == "A")
             {
-                return PagoPorHora*HorasTrabajadas * (int)porcentajePorCategoria.A / 100;
+                return PagoPorHora*HorasTrabajadas * (decimal)porcentajePorCategoria.A / 100;
             }
             else if (this.Categoria == "B")
             {
-                return PagoPorHora*HorasTrabajadas * (int)porcentajePorCategoria.B / 100;
+                return PagoPorHora*HorasTrabajadas * (decimal)porcentajePorCategoria.B / 100;
             }
             else if (this.Categoria == "C")
             {
-                return PagoPorHora * HorasTrabajadas * (int)porcentajePorCategoria.C / 100;
+                return PagoPorHora * HorasTrabajadas * (decimal)porcentajePorCategoria.C / 100;
             }
             else
             {
