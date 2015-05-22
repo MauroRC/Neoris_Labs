@@ -18,9 +18,8 @@ namespace Lab03__Excepciones
         {
             try
             {
-                Random rnd = new Random();
-                int nro1, nro2;
-                nro2 = rnd.Next() / nro1;
+                int nro1=0, nro2=0;
+                nro1 = nro1 / nro2;
             }
             catch (DivideByZeroException)
             {
