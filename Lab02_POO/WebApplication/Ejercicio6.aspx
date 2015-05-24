@@ -8,8 +8,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
+    <div>  
+        <asp:Button Text="Que dia sera mañana?" runat="server" OnClick="Pregunta_Click" />
+        <asp:TextBox ID="tbxDia" runat="server" Width="250px"/>
     </div>
     </form>
 </body>
